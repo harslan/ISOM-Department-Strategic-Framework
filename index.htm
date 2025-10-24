@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISOM Department Strategic Framework 2025-2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .intro {
+            padding: 40px;
+            background: #f8f9fa;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .intro h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .framework-visual {
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .framework-title {
+            text-align: center;
+            font-size: 2em;
+            color: #1e3c72;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .pipeline {
+            display: flex;
+            gap: 0;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .pipeline-stage {
+            flex: 1;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pipeline-stage:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .stage-attract {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .stage-develop {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .stage-launch {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .pipeline-stage h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .pipeline-stage .stage-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pipeline-stage .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .foundation {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .foundation h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .foundation p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .goals-section {
+            padding: 60px 40px;
+            background: #f8f9fa;
+        }
+
+        .goal-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 6px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .goal-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .goal-card.attract {
+            border-color: #667eea;
+        }
+
+        .goal-card.develop {
+            border-color: #f5576c;
+        }
+
+        .goal-card.launch {
+            border-color: #00f2fe;
+        }
+
+        .goal-card.foundation {
+            border-color: #1e3c72;
+        }
+
+        .goal-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+
+        .goal-card .category {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .attract .category {
+            background: #667eea;
+            color: white;
+        }
+
+        .develop .category {
+            background: #f5576c;
+            color: white;
+        }
+
+        .launch .category {
+            background: #00f2fe;
+            color: white;
+        }
+
+        .foundation .category {
+            background: #1e3c72;
+            color: white;
+        }
+
+        .goal-card ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .goal-card li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .goal-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: inherit;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Metrics Section Styles */
+        .metrics-section {
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .metrics-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .metrics-intro h2 {
+            font-size: 2em;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        .metrics-intro p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .measurement-framework {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .measurement-framework h3 {
+            color: #1e3c72;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .three-e {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .e-pillar {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .e-pillar h4 {
+            color: #1e3c72;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+
+        .e-pillar p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid;
+        }
+
+        .metric-card.attract {
+            border-color: #667eea;
+        }
+
+        .metric-card.develop {
+            border-color: #f5576c;
+        }
+
+        .metric-card.launch {
+            border-color: #00f2fe;
+        }
+
+        .metric-card.foundation {
+            border-color: #1e3c72;
+        }
+
+        .metric-card h4 {
+            font-size: 1.4em;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .metric-card .phase-icon {
+            font-size: 1.2em;
+        }
+
+        .metric-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 3px solid #ddd;
+        }
+
+        .metric-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .metric-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 1.05em;
+        }
+
+        .metric-description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .north-star {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .north-star h3 {
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+
+        .north-star-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .north-star-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .north-star-item .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .north-star-item h4 {
+            color: #1e3c72;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .north-star-item p {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .equity-focus {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .equity-focus h4 {
+            color: #856404;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .equity-focus p {
+            color: #856404;
+            line-height: 1.7;
+        }
+
+        .footer-note {
+            background: #1e3c72;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-note h4 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .footer-note p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .pipeline {
+                flex-direction: column;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .north-star-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .framework-title {
+                font-size: 1.5em;
+            }
+
+            .goal-card {
+                padding: 25px;
+            }
+
+            body {
+                padding: 10px;
+            }
+
+            .three-e {
+                flex-direction: column;
+            }
+        }
+
+        .arrow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .arrow {
+            font-size: 3em;
+            color: #667eea;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .framework-explanation {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .framework-explanation h3 {
+            color: #1e3c72;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .framework-explanation p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .implementation-note {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .implementation-note h4 {
+            color: #0c5460;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .implementation-note ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .implementation-note li {
+            color: #0c5460;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .implementation-note li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ISOM Department Strategic Framework</h1>
+            <div class="subtitle">Academic Year 2025-2026</div>
+        </header>
+
+        <div class="intro">
+            <h2>Our Strategic Approach</h2>
+            <p>Our department goals are organized around an integrated <strong>Student Lifecycle Framework</strong>. We strategically support students from their first discovery of our programs through their successful launch into professional careers—all powered by a foundation of faculty innovation and scholarship that ensures our curriculum remains cutting-edge and our teaching methods exemplary.</p>
+        </div>
+
+        <div class="framework-visual">
+            <h2 class="framework-title">The Student Lifecycle Integration Model</h2>
+            
+            <div class="framework-explanation">
+                <h3>Framework Philosophy</h3>
+                <p>This framework positions our department as architecturally sophisticated and student-centered. Each phase of the student journey is intentionally designed to build upon the previous one, creating a seamless progression from recruitment through career placement. Faculty innovation serves as the engine that powers all three phases, ensuring continuous improvement and relevance.</p>
+            </div>
+
+            <div class="pipeline">
+                <div class="pipeline-stage stage-attract">
+                    <div class="icon">🎯</div>
+                    <h3>ATTRACT</h3>
+                    <div class="stage-label">Recruitment Phase</div>
+                </div>
+                <div class="pipeline-stage stage-develop">
+                    <div class="icon">🚀</div>
+                    <h3>DEVELOP</h3>
+                    <div class="stage-label">Retention Phase</div>
+                </div>
+                <div class="pipeline-stage stage-launch">
+                    <div class="icon">💼</div>
+                    <h3>LAUNCH</h3>
+                    <div class="stage-label">Placement Phase</div>
+                </div>
+            </div>
+
+            <div class="arrow-container">
+                <div class="arrow">↓</div>
+            </div>
+
+            <div class="foundation">
+                <h3>🎓 Faculty Innovation Engine</h3>
+                <p>Scholarship & Teaching Excellence Powers All Phases</p>
+            </div>
+        </div>
+
+        <div class="goals-section">
+            <div class="goal-card attract">
+                <span class="category">Attract Phase</span>
+                <h3>Recruitment & Outreach</h3>
+                <ul>
+                    <li>Grow BAIS enrollment by attracting new students to SBS and promoting double majors and minors across the school.</li>
+                    <li>Host alumni-led info sessions for prospective students.</li>
+                    <li>Pilot a short "warm-up" experience (e.g., Excel micro-badge).</li>
+                </ul>
+            </div>
+
+            <div class="goal-card develop">
+                <span class="category">Develop Phase</span>
+                <h3>Retention & Student Experience</h3>
+                <ul>
+                    <li>Expand project-based learning by developing and promoting the faculty-led consulting project course (ISOM 424).</li>
+                    <li>Explore an "innovation incubator" for hands-on experience.</li>
+                    <li>Continue the seminar series linking students with alumni and industry leaders.</li>
+                </ul>
+            </div>
+
+            <div class="goal-card launch">
+                <span class="category">Launch Phase</span>
+                <h3>Placement & Partnerships</h3>
+                <ul>
+                    <li>Position course projects as portfolio-ready artifacts that students can showcase in the job market.</li>
+                    <li>Partner with employers on "interview sprints" and preparation checkpoints.</li>
+                    <li>Strengthen alumni mentorship, networking, and placement support.</li>
+                    <li>Develop a "skills snapshot" aligning courses with industry needs.</li>
+                </ul>
+            </div>
+
+            <div class="goal-card foundation">
+                <span class="category">Foundation Layer</span>
+                <h3>Faculty Scholarship & Innovation</h3>
+                <ul>
+                    <li>Pilot faculty development workshops on GenAI/ML and teaching innovation, open to all SBS faculty.</li>
+                    <li>Foster collaboration by sharing research ideas and teaching strategies in department exchanges.</li>
+                    <li>Support external funding and cross-disciplinary research.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="metrics-section">
+            <div class="metrics-intro">
+                <h2>Measuring Our Success</h2>
+                <p>We are committed to tracking meaningful, equitable metrics that capture true impact across the student lifecycle. Our measurement approach balances quantitative outcomes with qualitative insights, ensuring we serve all students effectively.</p>
+            </div>
+
+            <div class="measurement-framework">
+                <h3>Our Measurement Philosophy: The 3E Approach</h3>
+                <div class="three-e">
+                    <div class="e-pillar">
+                        <h4>Equity</h4>
+                        <p>Disaggregate data to ensure all students succeed</p>
+                    </div>
+                    <div class="e-pillar">
+                        <h4>Engagement</h4>
+                        <p>Measure depth and quality of student involvement</p>
+                    </div>
+                    <div class="e-pillar">
+                        <h4>Effectiveness</h4>
+                        <p>Track outcomes that matter for student success</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="equity-focus">
+                <h4>🤝 Equity Commitment</h4>
+                <p>All metrics will be disaggregated by gender, race/ethnicity, first-generation status, transfer status, and prior experience level. We will actively monitor success gaps and implement targeted interventions to ensure equitable outcomes for all students.</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card attract">
+                    <h4><span class="phase-icon">🎯</span> Attract Phase Metrics</h4>
+                    
+                    <div class="metric-item">
+                        <div class="metric-name">Enrollment Growth</div>
+                        <div class="metric-description">Total BAIS majors, double major/minor adoption rates, and demographic diversity (first-gen, underrepresented groups, transfer students)</div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-name">Conversion Effectiveness</div>
+                        <div class="metric-description">Inquiry-to-enrollment rate; micro-badge completion → course enrollment rate</div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-name">Program Awareness</div>
+                        <div class="metric-description">Alumni session participation; cross-school visibility survey ("% of SBS students who understand BAIS career opportunities")</div>
+                    </div>
+                </div>
+
+                <div class="metric-card develop">
+                    <h4><span class="phase-icon">🚀</span> Develop Phase Metrics</h4>
+                    
+                    <div class="metric-item">
+                        <div class="metric-name">Retention & Persistence</div>
+                        <div class="metric-description">Major retention rate; course completion rates; credit momentum (on-time progression)</div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-name">Experiential Learning Engagement</div>
+                        <div class="metric-description">ISOM 424 enrollment and project completion; innovation incubator participation; seminar series attendance (unique + repeat)</div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-name">Learning Quality</div>
+                        <div class="metric-description">Student feedback on hands-on experience; pre/post skill confidence surveys; faculty project quality assessments</div>
+                    </div>
+                </div>
+
+                <div class="metric-card launch">
+                    <h4><span class="phase-icon">💼</span> Launch Phase Metrics</h4>
+                    
+                    <div class="metric-item">
+                        <div class="metric-name">Career Outcomes</div>
+                        <div class="metric-description">Employment/grad school rate at 6 months; job relevance score; starting salary ranges (contextualized by geography/industry)</div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-name">Career Preparedness</div>
+                        <div class="metric-description">% students with portfolio artifacts; interview sprint participation; self-reported career readiness (pre/post)</div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-name">Network & Support</div>
+                        <div class="metric-description">Mentor-mentee matches and relationship duration; alumni engagement rate; skills snapshot adoption and confidence</div>
+                    </div>
+                </div>
+
+                <div class="metric-card foundation">
+                    <h4><span class="phase-icon">🎓</span> Foundation Layer Metrics</h4>
+                    
+                    <div class="metric-item">
+                        <div class="metric-name">Faculty Development</div>
+                        <div class="metric-description">Workshop participation (ISOM + other SBS faculty); teaching innovation adoption; cross-departmental collaboration initiatives</div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-name">Research Productivity</div>
+                        <div class="metric-description">Publications and presentations; external funding (submitted and awarded); cross-disciplinary research projects</div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-name">Faculty Sustainability</div>
+                        <div class="metric-description">Professional development support satisfaction; workload equity across ranks; faculty retention rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="north-star">
+                <h3>⭐ North Star Metrics (Primary Success Indicators)</h3>
+                <p>If we need to communicate progress quickly, these four metrics tell our story:</p>
+                
+                <div class="north-star-grid">
+                    <div class="north-star-item">
+                        <div class="icon">🎯</div>
+                        <h4>Attract</h4>
+                        <p>BAIS enrollment growth percentage (year-over-year)</p>
+                    </div>
+                    
+                    <div class="north-star-item">
+                        <div class="icon">🚀</div>
+                        <h4>Develop</h4>
+                        <p>% students completing experiential learning (ISOM 424 or incubator)</p>
+                    </div>
+                    
+                    <div class="north-star-item">
+                        <div class="icon">💼</div>
+                        <h4>Launch</h4>
+                        <p>% graduates employed/in grad school within 6 months + portfolio completion</p>
+                    </div>
+                    
+                    <div class="north-star-item">
+                        <div class="icon">🎓</div>
+                        <h4>Foundation</h4>
+                        <p>Number of faculty collaborations (teaching or research)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="implementation-note">
+                <h4>📊 Implementation Approach</h4>
+                <ul>
+                    <li>Start with 3-5 metrics per phase in Year 1, expand based on data capacity</li>
+                    <li>Establish baselines before setting ambitious targets</li>
+                    <li>Combine quantitative data with qualitative student and faculty stories</li>
+                    <li>Review metrics quarterly with faculty for transparency and collective ownership</li>
+                    <li>Iterate annually—refine what we measure based on what we learn</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <h4>Building Our Shared Vision</h4>
+            <p>We are gathering faculty input so that these goals represent a shared vision for the department. We recognize that certain goals will require multi-year effort. For this year, we will focus on a short list of actionable initiatives that will move us forward strategically across all phases of the student lifecycle. Our measurement approach ensures accountability while maintaining the flexibility to adapt as we learn.</p>
+        </div>
+    </div>
+</body>
+</html>
